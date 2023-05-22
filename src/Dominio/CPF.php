@@ -1,6 +1,6 @@
 <?php
 
-namespace Clean\Arquitetura;
+namespace Clean\Arquitetura\Dominio;
 
 use InvalidArgumentException;
 
