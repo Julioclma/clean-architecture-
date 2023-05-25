@@ -12,6 +12,7 @@ class Aluno
     private CPF $cpf;
     private Email $email;
     private array $telefones;
+    private string $senha;
 
     public static function comCpfEmailNome(string $cpf, string $email, string $nome): self
     {
