@@ -25,6 +25,7 @@ class CPF
       
     }
 
+
     public function __toString(): string
     {
         return $this->digito;

@@ -25,11 +25,31 @@ class Aluno
         $this->email = $email;
     }
 
+    public function telefones(): array
+    {
+        return $this->telefones;
+    }
+
     public function adicionarTelefone(string $ddd, string $numero)
     {
         $this->telefones[] = new Telefone($ddd, $numero);
     }
+
+    public function cpf() : string
+    {
+        return $this->cpf;
+    }
+
+    public function nome() : string
+    {
+        return $this->nome;
+    }
+
+    public function email() : string
+    {
+        return $this->email;
+    }
     
 }
 
-$aluno = Aluno::comCpfEmailNome("48971295830", "julio@yahoo.com", "julio mafra");
+// $aluno = Aluno::comCpfEmailNome("48971295830", "julio@yahoo.com", "julio mafra");

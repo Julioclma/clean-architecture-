@@ -2,6 +2,8 @@
 
 namespace Clean\Arquitetura\Dominio\Aluno;
 
+use Clean\Arquitetura\Dominio\CPF;
+
 interface RepositorioAluno
 {
     public function adicionar(Aluno $aluno) : void;
