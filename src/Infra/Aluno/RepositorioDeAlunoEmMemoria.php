@@ -10,33 +10,29 @@ class RepositorioDeAlunoEmMemoria implements RepositorioAluno
 {
 
     private array $alunos;
-    public function adicionar(Aluno $aluno) : void
+    public function adicionar(Aluno $aluno): void
     {
 
         $this->alunos[] = $aluno;
     }
 
-    public function buscarPorCpf(CPF $cpf) : Aluno
+    public function buscarPorCpf(CPF $cpf): Aluno
     {
-        $alunosFiltrados = array_filter($this->alunos, fn(Aluno $aluno) => $aluno->cpf() == $cpf);
+        $alunosFiltrados = array_filter($this->alunos, fn (Aluno $aluno) => $aluno->cpf() == $cpf);
 
-        if(count($alunosFiltrados) === 0){
+        if (count($alunosFiltrados) === 0) {
             throw new ("Aluno não encontrado");
-            
         }
 
         return $alunosFiltrados[0];
-
     }
 
-    public function buscarTodos() : array
+    public function buscarTodos(): array
     {
         return $this->alunos;
-
     }
 
-    public function removerPorCpf(CPF $cpf) : void
+    public function removerPorCpf(CPF $cpf): void
     {
-        
     }
 }

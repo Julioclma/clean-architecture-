@@ -27,7 +27,7 @@ class RepositorioDeAlunoComPDO implements RepositorioAluno
         $stmt->execute();
 
         $query = 'INSERT INTO telefones VALUES (:ddd, :numero, :cpf_aluno)';
-        
+
         $stmt = $this->conexao->prepare($query);
 
         foreach ($aluno->telefones() as $telefone) {
@@ -44,7 +44,7 @@ class RepositorioDeAlunoComPDO implements RepositorioAluno
         $stmt = $this->conexao->prepare($query);
         $stmt->bindValue(':cpf', $cpf);
         $stmt->execute();
-        $aluno = $stmt->fetch(\PDO::FETCH_ASSOC);
+        $aluno = $stmt->fetch(PDO::FETCH_ASSOC);
         return Aluno::comCpfEmailNome($aluno['cpf'], $aluno['email'], $aluno['nome']);
     }
 
@@ -53,13 +53,13 @@ class RepositorioDeAlunoComPDO implements RepositorioAluno
         $query = 'SELECT * FROM alunos';
         $stmt = $this->conexao->prepare($query);
         $stmt->execute();
-        $alunos = $stmt->fetchAll(\PDO::FETCH_ASSOC);
+        $alunos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         foreach ($alunos as $aluno) {
             $result[] = Aluno::comCpfEmailNome($aluno['cpf'], $aluno['email'], $aluno['nome']);
         }
- 
-        return $result;
+
+        return $result; 
     }
 
     public function removerPorCpf(CPF $cpf): void
