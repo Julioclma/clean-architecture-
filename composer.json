@@ -5,5 +5,8 @@
             "Clean\\Arquitetura\\" : "src/"
         }
 
+    },
+    "require": {
+        "phpmailer/phpmailer": "^6.8"
     }
 }
