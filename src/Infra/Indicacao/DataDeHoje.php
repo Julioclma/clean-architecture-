@@ -1,8 +1,8 @@
 <?php
 
-namespace Clean\Arquitetura\Infra\Aluno;
+namespace Clean\Arquitetura\Infra\Indicacao;
 
-use Clean\Arquitetura\Dominio\Aluno\DefinirData;
+use Clean\Arquitetura\Dominio\Indicacao\DefinirData;
 use DateTime;
 use DateTimeZone;
 

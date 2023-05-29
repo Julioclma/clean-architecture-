@@ -19,7 +19,7 @@ class Aluno
        return new Aluno($nome, new CPF($cpf), new Email($email));
     }
 
-    public function __construct(string $nome, CPF $cpf, Email $email)
+     public function __construct(string $nome, CPF $cpf, Email $email)
     {
         $this->nome = $nome;
         $this->cpf = $cpf;
@@ -52,5 +52,3 @@ class Aluno
     }
     
 }
-
-// $aluno = Aluno::comCpfEmailNome("48971295830", "julio@yahoo.com", "julio mafra");

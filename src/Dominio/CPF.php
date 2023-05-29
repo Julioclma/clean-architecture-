@@ -15,14 +15,12 @@ class CPF
 
     public function validateCpf(string $digito): void
     {
-
-        if(strlen($digito) > 6){
-
-            $this->$digito = $digito;
+        if (strlen($digito) > 6) {
+            $this->digito = $digito;
+            return;
         }
 
-      throw new InvalidArgumentException("CPF INVÁLIDO!");
-      
+        throw new InvalidArgumentException("CPF INVÁLIDO!");
     }
 
 
