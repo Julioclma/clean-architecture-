@@ -52,5 +52,3 @@ class Aluno
     }
     
 }
-
-$aluno = Aluno::comCpfEmailNome("48971295830", "julio@yahoo.com", "julio mafra");
