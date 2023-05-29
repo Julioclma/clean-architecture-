@@ -1,6 +1,6 @@
 <?php
 
-namespace Clean\Arquitetura\Dominio\Aluno;
+namespace Clean\Arquitetura\Dominio\Indicacao;
 
 use DateTime;
 

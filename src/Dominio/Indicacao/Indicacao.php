@@ -3,7 +3,6 @@
 namespace Clean\Arquitetura\Dominio\Indicacao;
 
 use Clean\Arquitetura\Dominio\Aluno\Aluno;
-use Clean\Arquitetura\Dominio\Aluno\DefinirData;
 use DateTime;
 
 class Indicacao
